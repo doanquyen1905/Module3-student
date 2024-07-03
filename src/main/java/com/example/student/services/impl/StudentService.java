@@ -8,7 +8,7 @@ import com.example.student.services.IStudentService;
 import java.util.List;
 
 public class StudentService implements IStudentService {
-    private static IStudentRepository studentRepository = new StudentRepository();
+    private static final IStudentRepository studentRepository = new StudentRepository();
     @Override
     public List<Student> findAll() {
         return studentRepository.findAll();
