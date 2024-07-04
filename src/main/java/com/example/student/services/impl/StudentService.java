@@ -1,5 +1,6 @@
 package com.example.student.services.impl;
 
+import com.example.student.dto.StudentDTO;
 import com.example.student.models.Student;
 import com.example.student.repositories.IStudentRepository;
 import com.example.student.repositories.impl.StudentRepository;
@@ -10,7 +11,7 @@ import java.util.List;
 public class StudentService implements IStudentService {
     private static final IStudentRepository studentRepository = new StudentRepository();
     @Override
-    public List<Student> findAll() {
+    public List<StudentDTO> findAll() {
         return studentRepository.findAll();
     }
 
@@ -25,18 +26,18 @@ public class StudentService implements IStudentService {
     }
 
     @Override
-    public List<Student> findByName(String name) {
+    public List<StudentDTO> findByName(String name) {
         return studentRepository.findByName(name);
     }
 
     @Override
-    public Student findById(long id) {
+    public StudentDTO findById(long id) {
         return studentRepository.findById(id);
     }
 
     @Override
-    public void update(long id, Student student) {
-        studentRepository.update(id,student);
+    public void update(long id, StudentDTO student) {
+        studentRepository.update(id, student);
     }
 
 }

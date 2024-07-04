@@ -44,12 +44,14 @@
             <th>Mã</th>
             <th>Họ và tên</th>
             <th>Địa chỉ</th>
+            <th>Lớp</th>
             <th>Điểm</th>
             <th>Học lực</th>
             <th>Chức năng</th>
         </tr>
         </thead>
         <tbody>
+        <%--@elvariable id="students" type="java.util.List"--%>
         <c:forEach var="student" items="${students}" varStatus="status">
             <tr>
                 <td>${status.count}</td>
@@ -57,6 +59,7 @@
                 <td>${student.name}</td>
                 <td>${student.address}</td>
                 <td>${student.point}</td>
+                <td>${student.nameClass}</td>
                 <td>
                         <%--                    <c:if test="${student.point >= 8}">Học sinh giỏi</c:if>--%>
                         <%--                    <c:if test="${student.point >= 6.5 && student.point < 8}">Học sinh khá</c:if>--%>

@@ -44,7 +44,15 @@
         <div class="mb-3">
             <label class="form-label" for="point">Điểm</label>
             <input type="number" class="form-control" id="point" name="point" min="0" max="10">
-
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="classroom">classroom</label>
+            <select id="classroom", name="classroom">
+                <%--@elvariable id="classrooms" type="java.util.List"--%>
+                <c:forEach var="classroom" items="${classrooms}">
+                    <option value="${classroom.id}">${classroom.name}</option>
+                </c:forEach>
+            </select>
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
